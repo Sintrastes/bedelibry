@@ -1,0 +1,7 @@
+
+module schema.bedelibry.meta.modules.
+
+import schema.meriv.modules.
+import scema.bedelibry.subjects.
+
+rel discusses: meriv_module, subject.

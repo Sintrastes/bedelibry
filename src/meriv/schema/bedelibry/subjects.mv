@@ -1,0 +1,22 @@
+module schema.bedelibry.subjects.
+
+% A subject is a more-or-less specific area of human inqury. 
+type subject 
+
+% The "sub-subject" relation, used to denote that
+% a subject is considered to be a more specific
+% part of another subject.
+rel subSubject: subject, subject.
+
+subSubject X Z
+  :- subSubject X Y, subSubject Y Z.
+
+mathematics: subject.
+logic: subject.
+history: subject.
+
+% history can be sub-divided into more specific
+% histories of other subjects.
+type historyOf(subject) <: history.
+
+name(nate, "nate").

@@ -1,0 +1,4 @@
+module schema.base.person.
+
+% Reference to some human being.
+type person.

@@ -1,0 +1,18 @@
+
+module schema.meriv.modules.
+
+% A meriv module is defined by a list of 
+% strings, to be used as an identifier.
+type meriv_module(
+    name: list[string]
+).
+
+% Meriv modules can contain comments
+rel commentOf: meriv_module, meriv_comment.
+
+% Meriv modules can contain declarations.
+rel declarationOf: meriv_module, meriv_declaration.
+
+% Declaration that a meriv module is "personal", and contains
+% definitions and/or facts that are intended only for personal use.
+rel personal: meriv_module.

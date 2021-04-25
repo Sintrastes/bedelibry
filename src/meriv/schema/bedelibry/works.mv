@@ -1,0 +1,35 @@
+module schema.bedelibry.works.
+
+import schema.base.person.
+import schema.bedelibry.ideas.
+
+% A work is any medium published somewhere for publication. 
+type work.
+
+% An article is a type of work, usually published in a journal.
+type article :< work.
+
+% A paper is a type of article.
+alias paper = article.
+
+% A book is a type of work.
+type book :< work.
+
+% A post, somewhere on the internet, is a type of work.
+type post :< work.
+
+% A blog post is one type of post.
+type blog_post :< post.
+
+% Specifies the author of a work, if specified.
+rel author: work, person.
+
+% A work can reference another work by citation, or mention.
+rel references: work, work.
+
+% A work can discuss an idea.
+rel discusses: work, idea.
+
+% A tutorial (of any format), is a type of expository work
+% meant to introduce a subject or topic.
+rel tutorial(about: subject) <: work.

@@ -1,0 +1,10 @@
+module schema.bedelibry.ideas.
+
+% A concept
+type concept.
+
+% A concept may be construed as being part of a subject.
+rel partOf: concept, subject.
+
+% 
+type idea.

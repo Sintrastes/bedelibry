@@ -1,0 +1,6 @@
+
+module schema.bedelibry.subjects.math.
+
+import schema.bedelibry.ideas.
+
+category_theory: subject.

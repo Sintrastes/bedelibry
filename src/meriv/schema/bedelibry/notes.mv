@@ -1,0 +1,12 @@
+module schema.bedelibry.notes.
+
+type note(
+  text: string
+).
+
+% Notes are usually written by a person.
+rel wrote: note, person.
+
+% This is my comment.
+rel discusses: note, idea.
+
