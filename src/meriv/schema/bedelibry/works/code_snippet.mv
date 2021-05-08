@@ -1,0 +1,13 @@
+
+module schema.bedelibry.works.code_snippet
+
+import schema.bedelibry.works.
+import schema.bedelibry.subjects.computer_science.programming_languages
+
+type code_snippet :< work
+
+rel in_language: code_snippet, programming_language.
+
+% Note: It might be better if this is a more general relation
+% this is to note that something is embeded as a part of another note.
+rel in_document: 

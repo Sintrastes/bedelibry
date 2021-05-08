@@ -1,0 +1,8 @@
+
+module schema.bedelibry.works.library
+
+% A programming language library is a type of work.
+type library :< work
+
+% Defines a source for where to obtain the library.
+rel source: library, url.
