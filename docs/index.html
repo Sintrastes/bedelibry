@@ -33,7 +33,7 @@ Released   : 20130902
 		<ul>
 			<li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
 			<li><a href="#get-started" accesskey="2" title="">Get Started</a></li>
-			<li><a href="#" accesskey="5" title="">Github</a></li>
+			<li><a href="https://github.com/sintrastes/bedelibry" accesskey="5" title="">Github</a></li>
 		</ul>
 	</div>
 </div>
@@ -41,7 +41,7 @@ Released   : 20130902
 	<div id="welcome" class="container">
 		<img id="logo-top" style="horizontal-align:middle;" width="125em" src="https://raw.githubusercontent.com/Chinchillord/Bedellibrary/master/img/BedelibryLogo.png"/>
 		<h2 class=".center">Bedelibry: The intelligent research assistant</h2>
-		<p> Bedelibry is a desktop, web, and mobile application that gives you the tools you need to organize and engage with your personal web of knoweldge. </p>
+		<p> Bedelibry is a desktop, web, and mobile application that gives you the tools you need to organize and engage with your personal web of knoweldge. Bedelibry aims to empower every-day people with these tools for the furtherance of human knowldge, regardless of if you're a student, just a curious person, or working on ground-breaking research of your own.</p>
 	</div>
 	<div id="three-column" class="container" style="border-top: 2px solid #319065;">
 		<div id="three-column-body">
@@ -80,7 +80,45 @@ Released   : 20130902
 	
 	<h2>How it works</h2>
 	
+	<p>Bedelibry works by allowing you to specify your own specailized languages for the fields that interest you. This is accomplished through a simple text specification language called Meriv. For instance, to specify a new type of object of interest to you, simply write <i>type</i> followed by the name of the object of interest, and ended with a period. </p>
+	
+	<pre>
+    type animal.</pre>
+	
+	<p>In Meriv, we call categories of such objects of interest <i>types</i>. If you want to specify other types of object relevant your studies that are a <i>specail case</i> of another type of objects of interest, that is declared as follows:</p>
+	
+	<pre>
+    type mammal :< animal.</pre>
+	
+	<p> <i>:&lt;</i>&nbsp; in the above can be read "is a type of". For instance "A mammal is a type of animal".</p>
+	
+	<p>Once you've declared a type like "animal" or "mammal", you can declare "instances" (i.e. examples) of objects of those types. In Meriv, we call such objects "entities", and they are declared as follows:</p>
+	
+	<pre>
+    my_dog: mammal.</pre>
+	
+	<p>The colon in the above can be read as "is a" -- so the above reads "my_dog is a mammal".</p>
+	
+	<p>Notice the underscore in the example above between "my" and "dog". For entities like this which are <i>identified</i> by more than a single word, we need to be sure to put underscores in-between each of those words so that it's perfectly clear that <i>my_dog</i> is a single entity, and not some kind of <i>compound entity</i> (that's a more advanced feature we'll get to later)</i>. 
+	
+	<p>Before we go on, take a few entities of interest in your field of study/research, and try to model them as a simple Meriv schema. You can enter this into the bedelibry app under the "schema" page.</p>
+	
+	<p>After doing that, go back to the home page, and type in one of your entities you have declared into the search bar. You should see something like this:</p>
+	
+	...
+	
+	<p>This is part of one of the key functionalities that Bedelibry provides -- the ability to search your personal <i>knowledge base</i> for something you only have <i>partial information</i> about. For instance, above we typed in <i>my_dog</i>, and Bedelibry was able to tell us (using Meriv symbology) that <i>my_dog</i> is a mammal.</p>
+	
+	<p>Of course, this isn't incredibly useful by itself. Where Bedelibry shines is in it's ability to let us record <i>the relationships</i> between the kinds of entities we care about -- and to query that network of relationships to search for the information we are interested in recalling or analyzing.</p>
+	
+	<p>We are able to accomplish this in Bedelibry because Meriv is actually what is known as a <i>logic programming language</i> -- if you're not the "programming type", or don't have much experience with other types of programming languages, don't be put off by this! Meriv is different from most conventional programming languages in that it is <i>declarative</i>. In other words, we're just defning (or declaring) the entities and relationships between them that we care about, and write down some examples of such entities and rules governing those relationships, then the computer does the rest of the work!</p>
+	
+	<p>This takes a little bit of practice, but you definitely don't need to drop everything and go to some coding bootcamp. Bedelibry aims to bring the power of logic programming to <i>everyone</i>, no matter your background, areas of expertise, or even your language! (Meriv is designed to <i>not</i> be anglo-centric. No English required).
+	
 	<h2>Contributions Welcome</h2>
+	
+	<p>Bedelibry was concieved of and originally developed by me -- <a href="https://sintrastes.github.io/">Nathan Bedell</a>. However, as big of a project as this is, there will always be things to do and things that could be improved, so as an open-source project, contributors are welcome!</p>
+	
 	</div>
 </div>
 <div id="copyright" class="container">
